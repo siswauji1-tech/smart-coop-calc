@@ -76,11 +76,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Smart Poultry Manager — ERP Peternakan" },
       { name: "description", content: "Sistem manajemen terintegrasi untuk peternakan unggas dengan kalkulasi HPP berbasis aktivitas." },
-      { property: "og:title", content: "Smart Poultry Manager" },
-      { property: "og:description", content: "ERP peternakan: kelola kawanan, biaya, produksi, dan harga jual." },
+      { property: "og:title", content: "Smart Poultry Manager — ERP Peternakan" },
+      { property: "og:description", content: "Sistem manajemen terintegrasi untuk peternakan unggas dengan kalkulasi HPP berbasis aktivitas." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Smart Poultry Manager — ERP Peternakan" },
+      { name: "twitter:description", content: "Sistem manajemen terintegrasi untuk peternakan unggas dengan kalkulasi HPP berbasis aktivitas." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/09ef74e1-1ea6-46c6-b393-71d9a5d10cf2" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/09ef74e1-1ea6-46c6-b393-71d9a5d10cf2" },
     ],
     links: [
       {
