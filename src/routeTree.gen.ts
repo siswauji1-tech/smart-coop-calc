@@ -16,6 +16,7 @@ import { Route as AppSalesRouteImport } from './routes/_app.sales'
 import { Route as AppProductionsRouteImport } from './routes/_app.productions'
 import { Route as AppMortalitiesRouteImport } from './routes/_app.mortalities'
 import { Route as AppHppRouteImport } from './routes/_app.hpp'
+import { Route as AppGuideRouteImport } from './routes/_app.guide'
 import { Route as AppFlocksRouteImport } from './routes/_app.flocks'
 import { Route as AppExpensesRouteImport } from './routes/_app.expenses'
 import { Route as AppDashboardRouteImport } from './routes/_app.dashboard'
@@ -55,6 +56,11 @@ const AppHppRoute = AppHppRouteImport.update({
   path: '/hpp',
   getParentRoute: () => AppRoute,
 } as any)
+const AppGuideRoute = AppGuideRouteImport.update({
+  id: '/guide',
+  path: '/guide',
+  getParentRoute: () => AppRoute,
+} as any)
 const AppFlocksRoute = AppFlocksRouteImport.update({
   id: '/flocks',
   path: '/flocks',
@@ -83,6 +89,7 @@ export interface FileRoutesByFullPath {
   '/dashboard': typeof AppDashboardRoute
   '/expenses': typeof AppExpensesRoute
   '/flocks': typeof AppFlocksRoute
+  '/guide': typeof AppGuideRoute
   '/hpp': typeof AppHppRoute
   '/mortalities': typeof AppMortalitiesRoute
   '/productions': typeof AppProductionsRoute
@@ -95,6 +102,7 @@ export interface FileRoutesByTo {
   '/dashboard': typeof AppDashboardRoute
   '/expenses': typeof AppExpensesRoute
   '/flocks': typeof AppFlocksRoute
+  '/guide': typeof AppGuideRoute
   '/hpp': typeof AppHppRoute
   '/mortalities': typeof AppMortalitiesRoute
   '/productions': typeof AppProductionsRoute
@@ -109,6 +117,7 @@ export interface FileRoutesById {
   '/_app/dashboard': typeof AppDashboardRoute
   '/_app/expenses': typeof AppExpensesRoute
   '/_app/flocks': typeof AppFlocksRoute
+  '/_app/guide': typeof AppGuideRoute
   '/_app/hpp': typeof AppHppRoute
   '/_app/mortalities': typeof AppMortalitiesRoute
   '/_app/productions': typeof AppProductionsRoute
@@ -123,6 +132,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/expenses'
     | '/flocks'
+    | '/guide'
     | '/hpp'
     | '/mortalities'
     | '/productions'
@@ -135,6 +145,7 @@ export interface FileRouteTypes {
     | '/dashboard'
     | '/expenses'
     | '/flocks'
+    | '/guide'
     | '/hpp'
     | '/mortalities'
     | '/productions'
@@ -148,6 +159,7 @@ export interface FileRouteTypes {
     | '/_app/dashboard'
     | '/_app/expenses'
     | '/_app/flocks'
+    | '/_app/guide'
     | '/_app/hpp'
     | '/_app/mortalities'
     | '/_app/productions'
@@ -211,6 +223,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AppHppRouteImport
       parentRoute: typeof AppRoute
     }
+    '/_app/guide': {
+      id: '/_app/guide'
+      path: '/guide'
+      fullPath: '/guide'
+      preLoaderRoute: typeof AppGuideRouteImport
+      parentRoute: typeof AppRoute
+    }
     '/_app/flocks': {
       id: '/_app/flocks'
       path: '/flocks'
@@ -247,6 +266,7 @@ interface AppRouteChildren {
   AppDashboardRoute: typeof AppDashboardRoute
   AppExpensesRoute: typeof AppExpensesRoute
   AppFlocksRoute: typeof AppFlocksRoute
+  AppGuideRoute: typeof AppGuideRoute
   AppHppRoute: typeof AppHppRoute
   AppMortalitiesRoute: typeof AppMortalitiesRoute
   AppProductionsRoute: typeof AppProductionsRoute
@@ -258,6 +278,7 @@ const AppRouteChildren: AppRouteChildren = {
   AppDashboardRoute: AppDashboardRoute,
   AppExpensesRoute: AppExpensesRoute,
   AppFlocksRoute: AppFlocksRoute,
+  AppGuideRoute: AppGuideRoute,
   AppHppRoute: AppHppRoute,
   AppMortalitiesRoute: AppMortalitiesRoute,
   AppProductionsRoute: AppProductionsRoute,

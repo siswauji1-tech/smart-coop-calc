@@ -1,6 +1,6 @@
 import { Link, Outlet, useNavigate, useRouterState } from "@tanstack/react-router";
 import { useAuth } from "@/lib/auth-context";
-import { Egg, LayoutDashboard, Users, Wallet, Skull, PackageOpen, ShoppingCart, Calculator, Hammer, LogOut, Menu, X } from "lucide-react";
+import { Egg, LayoutDashboard, Users, Wallet, Skull, PackageOpen, ShoppingCart, Calculator, Hammer, LogOut, Menu, X, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -14,6 +14,7 @@ const nav = [
   { to: "/mortalities", label: "Kematian", icon: Skull },
   { to: "/assets", label: "Aset", icon: Hammer },
   { to: "/hpp", label: "Kalkulator HPP", icon: Calculator },
+  { to: "/guide", label: "Panduan", icon: BookOpen },
 ] as const;
 
 export function AppShell() {
