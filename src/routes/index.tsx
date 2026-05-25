@@ -64,7 +64,7 @@ function Landing() {
 
       <footer className="border-t border-border/60 mt-10">
         <div className="container mx-auto px-6 py-6 text-xs text-muted-foreground flex items-center gap-2">
-          <ShieldCheck className="h-4 w-4" /> Data peternakan Anda terisolasi & aman.
+          <ShieldCheck className="h-4 w-4" /> Data peternakan Anda terisolasi & aman. copyright by iyonesia381
         </div>
       </footer>
     </div>
