@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Egg, Loader2 } from "lucide-react";
 import { toast } from "sonner";
+import poultryFarm from "@/assets/poultry-farm.png";
 
 export const Route = createFileRoute("/auth")({ component: AuthPage });
 
@@ -51,18 +52,27 @@ function AuthPage() {
 
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
-      <div className="hidden lg:flex flex-col justify-between bg-sidebar text-sidebar-foreground p-12">
-        <div className="flex items-center gap-2">
+      <div className="relative hidden lg:flex flex-col justify-between bg-sidebar text-sidebar-foreground p-12 overflow-hidden">
+        <img
+          src={poultryFarm}
+          alt="Ilustrasi peternakan ayam"
+          aria-hidden="true"
+          loading="lazy"
+          width={1024}
+          height={1536}
+          className="pointer-events-none select-none absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-screen"
+        />
+        <div className="relative flex items-center gap-2">
           <div className="grid h-9 w-9 place-items-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
             <Egg className="h-5 w-5" />
           </div>
           <span className="font-bold">Smart Poultry Manager</span>
         </div>
-        <div>
+        <div className="relative">
           <h2 className="text-3xl font-bold leading-tight">Peternakan modern dimulai dari catatan yang rapi.</h2>
           <p className="mt-4 text-sm opacity-80 max-w-md">Hitung HPP otomatis, tentukan harga jual dengan percaya diri, dan ketahui setiap rupiah modal Anda menghasilkan apa.</p>
         </div>
-        <div className="text-xs opacity-60">© Smart Poultry Manager by iyonesia381</div>
+        <div className="relative text-xs opacity-60">© Smart Poultry Manager by iyonesia381</div>
       </div>
 
       <div className="flex items-center justify-center p-6">
