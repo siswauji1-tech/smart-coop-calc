@@ -62,7 +62,7 @@ function AuthPage() {
           <h2 className="text-3xl font-bold leading-tight">Peternakan modern dimulai dari catatan yang rapi.</h2>
           <p className="mt-4 text-sm opacity-80 max-w-md">Hitung HPP otomatis, tentukan harga jual dengan percaya diri, dan ketahui setiap rupiah modal Anda menghasilkan apa.</p>
         </div>
-        <div className="text-xs opacity-60">© Smart Poultry Manager</div>
+        <div className="text-xs opacity-60">© Smart Poultry Manager by iyonesia381</div>
       </div>
 
       <div className="flex items-center justify-center p-6">
