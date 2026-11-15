@@ -13,3 +13,11 @@ export default defineConfig({
     server: { entry: "server" },
   },
 });
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react' // atau framework yang Anda gunakan
+
+export default defineConfig({
+  plugins: [react()],
+  base: '/smart-coop-calc/', // Tambahkan baris ini sesuai nama repo
+})
